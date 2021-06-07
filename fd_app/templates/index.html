@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Face Detection</title>
+</head>
+<style>
+
+body {
+	font-size: 40px;
+	padding: 10px;
+	margin: 20px;
+    background-color :#034f84;
+
+    text-align: center;
+}
+div{
+	background-color :#92a8d1;
+	text-align: center;
+	border: 3px solid black;
+    border-radius: 10px;
+	padding: 20px;
+	margin: 35px;    
+}
+#upload{
+	background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+   }
+
+#submit{
+	background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+</style>
+
+<body>
+   {% if error %}
+   <h3>You might have not passed a file or it might not be an image file containing faces</h3>
+   {% endif %}
+ 
+ 
+   
+    <form method="post" enctype="multipart/form-data" action="renderimage">
+  
+ 
+ <div class="col-md-4 col-sm-4"><h1>FACE DETECTION</h1>
+ 	<h>Upload your photo here</h><br><br>
+ 	<input id="upload" type="file" name="imagetorender" hidden/>
+                <label id="upload" for="upload">Choose file</label><br><br>
+
+ 
+<input id="submit" type="submit" value="Submit" hidden/>
+                <label id="submit" for="submit">Submit</label><br></div>
+                <div >
+                	{% if (fileloc) and (fileloc!='error') %}
+ <h2>Total number of faces detected: {{numfaces}}</h2>
+ <img src={{fileloc}} alt='renderedimage'>
+ <!--{{fileloc}}-->
+ {% endif %}
+
+                </div>
+
+</form>
+<br>
+</body>
+</html>

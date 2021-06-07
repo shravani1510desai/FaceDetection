@@ -1,0 +1,41 @@
+﻿#body {
+    background-color: white;
+    padding: 10px;
+}
+
+#div_main
+{
+    padding: 30px;
+    border-radius: 10px;
+    background-color :sandybrown;
+    background-size:cover;
+    font-size: 30px;
+    align-content:center;
+}
+#div_main_align
+{
+    margin:20px;
+    padding-left:30%;
+}
+
+label {
+    padding-left: 10px;
+    font-size: 20px;
+    display: inline-block;
+    background-color: burlywood;
+    padding: 5px 24px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#div_space
+{
+    margin: 30px;
+}
+#div_img {
+    text-align: center;
+    border: 5px solid sandybrown;
+    padding: 30px;
+    border-radius: 10px;
+}
